@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.chatbot_section {
+    border: 1px solid red;
+    width: 100%;
+    height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.chatbot_section>h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.chatbot_section>h4 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.input_container {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid rgb(187, 187, 187);
+    position: sticky;
+    bottom: 10px;
+}
+
+.input_container>input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 24px;
+    outline: 0;
+    font-size: 16px;
+
+}
+
+.input_container>button {
+    position: absolute;
+    right: 6px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.input_container>button svg {
+    transform: translate(0px, 1px);
+}
+.input_container>button:disabled {
+    background-color: rgb(32, 32, 32);
+    cursor: auto;
+}
+
+.messagesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 78%;
+    align-items: center;
+    margin-bottom: 20px;
+    max-height: 70svh;
+    overflow-y: auto;padding-right: 10px;
+}
+
+.userPrompt {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #e4e3e3;
+    align-self: flex-end;
+    font-size: 16px;
+    max-width: 80%;
+    line-height: 1.65em;
+    font-size: 16px;
+    
+}
+
+.chatbotResponse {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    align-self: flex-start;
+    font-size: 16px;
+    line-height: 1.65em;
+    font-size: 18px;
+
+}
+
+.messagesContainer {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #414141 #f1f1f1; /* For Firefox */
+}
+
+.messagesContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track (the background of the scrollbar) */
+.messagesContainer::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light gray */
+    border-radius: 10px;
+}
+
+/* Handle (the draggable part) */
+.messagesContainer::-webkit-scrollbar-thumb {
+    background: #888; /* Dark gray */
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.messagesContainer::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a; /* Darker gray */
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
